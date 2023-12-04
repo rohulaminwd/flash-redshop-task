@@ -1,0 +1,82 @@
+/* Google fonts */
+@import url('https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@300;400;500;600;700&family=Oswald:wght@300;400;500&family=Reem+Kufi&family=Shalimar&display=swap');
+
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+body {
+  color: #000;
+  background: #fff;
+  font-family: 'Hind Siliguri', sans-serif !important;
+  scroll-behavior: smooth !important;
+}
+
+
+.sticky-nav {
+  position: fixed;
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid #6131a1a9;
+  top: 0; left: 0;
+  transition: all linear 0.4s;
+  color: #4ee4ff;
+  z-index: 99999;
+  border-bottom-left-radius: 16px;
+  border-bottom-right-radius: 16px;
+  animation: scroll-header-animation 0.5s linear;
+  box-shadow: 0px 2px 15px #0000000d;
+  background: radial-gradient(circle, rgba(102, 19, 197, 0.212) 0%, rgba(3, 110, 129, 0.247) 100%);
+}
+
+
+
+/* Set the width and height of the container with overflow */
+.custom-scrollbar {
+  overflow: auto;
+}
+
+::-webkit-scrollbar {
+  width: 14px;
+  background-color: #2c0668;
+}
+
+.custom-scrollbar::-webkit-scrollbar {
+  background: transparent !important;
+}
+
+/* Customize the scrollbar thumb (the draggable part) */
+::-webkit-scrollbar-thumb {
+  background: #4f07a1;
+  border-radius: 20px;
+  border: 3px solid transparent;
+  background-clip: content-box;
+}
+
+::-webkit-scrollbar-button {
+  color: #6819e9; /* Background color for buttons */
+}
+
+
+/* Optionally, you can style the scrollbar track on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #5c07ac;
+  border: 3px solid transparent;
+  background-clip: content-box;
+}
+
+
+
+
+/* animation header */
+@keyframes scroll-header-animation {
+  from {
+    top: -90px;
+  }
+
+  to {
+    top: 0;
+  }
+}
+
