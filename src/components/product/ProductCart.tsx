@@ -9,7 +9,7 @@ const ProductCart = ({ products }: any) => {
                 {
                     products?.map((item: any, index: number) => (
                         <div key={index} className=''>
-                            <Link href={`product-details/${item?.id}`} className='p-3'>
+                            <Link href={`/product-details/${item?.id}`} className='p-3'>
                                 <div>
                                     <div className='w-full overflow-hidden max-w-[300px]'>
                                         <Image src={item?.img} className='hover:scale-[1.1] duration-300' alt='img' />

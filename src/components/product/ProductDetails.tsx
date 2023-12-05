@@ -11,7 +11,7 @@ const ProductDetails = ({ product }: any) => {
     const [open, setOpen] = useState<any>(false)
 
     return (
-        <div className='lg:flex gap-x-3 p-4'>
+        <div className='lg:flex gap-x-3 p-2 md:p-3 lg:p-4'>
             <div className='flex lg:flex-row flex-col-reverse gap-2 lg:gap-3 w-full justify-center'>
                 <div className='flex gap-x-2 lg:block w-full lg:w-auto'>
                     {
@@ -27,7 +27,7 @@ const ProductDetails = ({ product }: any) => {
                 </div>
             </div>
             <div className='w-full'>
-                <div className='lg:mx-2 w-full'>
+                <div className='lg:mx-2 mt-8 lg:mt-0 w-full'>
                     <h3 className='lg:text-xl mb-2 lg:mb-3 text-black'>{product?.name}</h3>
                     <span className='lg:text-2xl text-black mr-2'>৳{product?.price}</span>
                     <span className='line-through lg:text-xl mr-2'>৳{product?.oldPrice}</span>
