@@ -1,10 +1,11 @@
+import LoadingSecondary from "@/components/ui/LoadingSecondary";
 
 
 
 const Loading = () => {
     return (
         <div className="">
-            <h3>Loading...</h3>
+            <LoadingSecondary />
         </div>
     );
 };

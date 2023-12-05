@@ -1,10 +1,9 @@
+import NotFound from "@/components/ui/NotFound";
 
 const NotFoundPage = () => {
     return (
         <div>
-            <h3>
-                Page not found
-            </h3>
+            <NotFound />
         </div>
     );
 };
