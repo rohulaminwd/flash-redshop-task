@@ -7,7 +7,7 @@ import { IoBagHandleOutline } from "react-icons/io5";
 
 const Navbar = () => {
     return (
-        <div className="border-b border-gray-300 py-3">
+        <div className="border-b bg-white z-50 sticky top-0 border-gray-300 py-3">
             <div className="max-w-[1060px] mx-auto">
                 <div className="flex items-center justify-between">
                     <div>
