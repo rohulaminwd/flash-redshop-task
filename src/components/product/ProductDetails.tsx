@@ -27,13 +27,13 @@ const ProductDetails = ({ product }: any) => {
                 </div>
             </div>
             <div className='w-full'>
-                <div className='mx-2 w-full'>
-                    <h3 className='text-xl mb-3 text-black'>{product?.name}</h3>
-                    <span className='text-2xl text-black mr-2'>৳{product?.price}</span>
-                    <span className='line-through text-xl mr-2'>৳{product?.oldPrice}</span>
-                    <span className='text-green-500 text-2xl font-bold'>%{((product?.oldPrice - product?.price) * 100 / product?.oldPrice).toFixed(2)} OFF</span>
+                <div className='lg:mx-2 w-full'>
+                    <h3 className='lg:text-xl mb-2 lg:mb-3 text-black'>{product?.name}</h3>
+                    <span className='lg:text-2xl text-black mr-2'>৳{product?.price}</span>
+                    <span className='line-through lg:text-xl mr-2'>৳{product?.oldPrice}</span>
+                    <span className='text-green-500 text:xl lg:text-2xl font-bold'>%{((product?.oldPrice - product?.price) * 100 / product?.oldPrice).toFixed(2)} OFF</span>
                     <p className='mt-2 text-sm text-gray-500'>inclusive of all taxes</p>
-                    <h3 className='my-4'>TSX : {color?.quantity}</h3>
+                    <h3 className='my-3 lg:my-4'>TSX : {color?.quantity}</h3>
 
                     <h5 className='text-black uppercase'>Select Color <span className='text-red-500'>*</span></h5>
                     <div className='flex items-center gap-3'>

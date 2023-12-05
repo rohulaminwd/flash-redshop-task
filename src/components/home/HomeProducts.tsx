@@ -13,7 +13,7 @@ const HomeProducts = () => {
     return (
         <div className='border-t border-gray-300'>
             <div className='w-full max-w-[1060px] mx-auto flex'>
-                <div className='py-2 w-[230px] text-gray-700 !sticky top-16'>
+                <div className='py-2 w-[230px] text-gray-700 lg:block hidden !sticky top-16'>
                     <div className='sticky top-20'>
                         <div className='flex items-center'>
                             <h3 className='px-2'>Categories</h3>
@@ -32,7 +32,7 @@ const HomeProducts = () => {
                         </div>
                     </div>
                 </div>
-                <div className='border-l w-full border-gray-300'>
+                <div className='lg:border-l w-full border-gray-300'>
                     <CategoryProducts products={iphoneCase} category={"IPHONE CASE"} id={"iphone"} />
                     <CategoryProducts products={iphoneCase} category={"IPHONE CASE"} id={"airpods"} />
                     <CategoryProducts products={iphoneCase} category={"IPHONE CASE"} id={"lighting"} />

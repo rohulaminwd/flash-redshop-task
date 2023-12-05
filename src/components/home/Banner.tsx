@@ -19,10 +19,10 @@ const Banner = () => {
                     300: {
                         slidesPerView: 1,
                     },
-                    868: {
+                    668: {
                         slidesPerView: 2,
                     },
-                    1024: {
+                    924: {
                         slidesPerView: 3,
                     },
                 }}
