@@ -17,7 +17,7 @@ const CategoryProducts = ({ products, category, id }: any) => {
                                         <Image src={item?.img} className='hover:scale-[1.1] duration-300' alt='img' />
                                     </div>
                                     <div className='my-2'>
-                                        <h3>{item?.name}</h3>
+                                        <h3>{item?.name?.slice(0, 17)}</h3>
                                         <span className='text-sm mr-2'>৳{item?.price}</span>
                                         <span className='line-through text-xs mr-2'>৳{item?.oldPrice}</span>
                                         <span className='text-red-500 text-sm '>%{((item?.oldPrice - item?.price) * 100 / item?.oldPrice).toFixed(2)} OFF</span>

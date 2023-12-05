@@ -33,7 +33,7 @@ const page = ({ params: { id } }: { params: { id: string } }) => {
                         <div className='flex items-center'>
                             <h3 className='px-2 text-black font-bold uppercase'>More Form {product?.category}</h3>
                         </div>
-                        <Link href={`category/${product?.category}`} className='flex items-center'>
+                        <Link href={`/categorys/${product?.category}`} className='flex items-center'>
                             <span className='px-2'>See All</span>
                             <IconChevronRight size={20} />
                         </Link>

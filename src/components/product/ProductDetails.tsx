@@ -4,6 +4,7 @@ import { IconPlus } from '@tabler/icons-react';
 import Image from 'next/image';
 import React, { useState } from 'react';
 import { IoBagHandleOutline } from 'react-icons/io5';
+import ColorButton from './ColorButton';
 
 const ProductDetails = ({ product }: any) => {
     const [img, setImg] = useState<any>(product?.img)
@@ -37,11 +38,7 @@ const ProductDetails = ({ product }: any) => {
 
                     <h5 className='text-black uppercase'>Select Color <span className='text-red-500'>*</span></h5>
                     <div className='flex items-center gap-3'>
-                        {
-                            product?.colors?.map((item: any, index: number) => (
-                                <div onClick={() => setColor(item)} key={index} className={`${item?.color === color?.color ? "border-[3px] border-red-700" : ""} mt-1 w-10 h-10 rounded-full bg-black ${item?.color}`}></div>
-                            ))
-                        }
+                        <ColorButton product={product} setColor={setColor} color={color} />
                     </div>
                     <div className='w-full mt-5 grid grid-cols-2 items-center gap-x-2'>
                         <button className='flex bg-black hover:bg-black text-white items-center gap-x-2 w-full btn'>

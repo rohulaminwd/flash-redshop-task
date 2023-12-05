@@ -9,6 +9,9 @@ import CategoryProducts from './CategoryProducts';
 const HomeProducts = () => {
     const [category, setCategory] = useState<string>("IPHONE CASE")
     const iphoneCase = ProductsData?.filter(item => item?.category === "IPHONE CASE")
+    const airpods = ProductsData?.filter(item => item?.category === "AIRPODS PRO CASE")
+    const lighting = ProductsData?.filter(item => item?.category === "LIGHTNING CABLE")
+    const power = ProductsData?.filter(item => item?.category === "POWER BANK")
 
     return (
         <div className='border-t border-gray-300'>
@@ -34,9 +37,9 @@ const HomeProducts = () => {
                 </div>
                 <div className='lg:border-l w-full border-gray-300'>
                     <CategoryProducts products={iphoneCase} category={"IPHONE CASE"} id={"iphone"} />
-                    <CategoryProducts products={iphoneCase} category={"IPHONE CASE"} id={"airpods"} />
-                    <CategoryProducts products={iphoneCase} category={"IPHONE CASE"} id={"lighting"} />
-                    <CategoryProducts products={iphoneCase} category={"IPHONE CASE"} id={"power"} />
+                    <CategoryProducts products={airpods} category={"AIRPODS PRO CASE"} id={"airpods"} />
+                    <CategoryProducts products={lighting} category={"LIGHTNING CABLE"} id={"lighting"} />
+                    <CategoryProducts products={power} category={"POWER BANK"} id={"power"} />
                 </div>
             </div>
         </div>

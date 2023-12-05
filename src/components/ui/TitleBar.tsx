@@ -9,7 +9,7 @@ const TitleBar = ({ item, title }: any) => {
                 <h3 className='px-2'>{title}</h3>
                 <span className='text-white rounded-[4px] py-0.5 px-1 ml-1 bg-[#000]'>{item}</span>
             </div>
-            <Link href={title} className='flex items-center'>
+            <Link href={`/categorys/${title}`} className='flex items-center'>
                 <span className='px-3'>See All</span>
                 <IconChevronRight />
             </Link>

@@ -25,7 +25,7 @@ const Navbar = () => {
                         <SearchBar />
                     </div>
                     <ul className="lg:flex hidden items-center gap-x-6">
-                        <Link href="#" className="flex items-center gap-x-2">
+                        <Link href="categories" className="flex items-center gap-x-2">
                             <IconCategory size={24} />
                             <span>Categories</span>
                         </Link>
