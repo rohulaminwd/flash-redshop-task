@@ -1,19 +1,18 @@
-import ProductCart from '@/components/product/ProductCart';
+
 import Navbar from '@/components/ui/Navbar';
 import SearchBar from '@/components/ui/SearchBar';
 import SmallNavbar from '@/components/ui/SmallNavbar';
 import { ProductsData } from '@/constants/productsData';
+import { Iproduct } from '@/types';
 import Image from 'next/image';
 import Link from 'next/link';
 import React from 'react';
 
 const page = () => {
-    const iphoneCase = ProductsData?.filter(item => item?.category === "IPHONE CASE")
-    const airpods = ProductsData?.filter(item => item?.category === "AIRPODS PRO CASE")
-    const lighting = ProductsData?.filter(item => item?.category === "LIGHTNING CABLE")
-    const power = ProductsData?.filter(item => item?.category === "POWER BANK")
-
-    console.log(iphoneCase, "okk")
+    const iphoneCase: Iproduct[] = ProductsData?.filter(item => item?.category === "IPHONE CASE")
+    const airpods: Iproduct[] = ProductsData?.filter(item => item?.category === "AIRPODS PRO CASE")
+    const lighting: Iproduct[] = ProductsData?.filter(item => item?.category === "LIGHTNING CABLE")
+    const power: Iproduct[] = ProductsData?.filter(item => item?.category === "POWER BANK")
     return (
         <div className='relative '>
             <Navbar />

@@ -3,11 +3,13 @@ import { productCategories, ProductsData } from '@/constants/productsData';
 import Link from 'next/link';
 import { useState } from 'react';
 import CategoryProducts from './CategoryProducts';
+import { Iproduct, ProductCategory } from '@/types';
 
 
 
 const HomeProducts = () => {
     const [category, setCategory] = useState<string>("IPHONE CASE")
+
     const iphoneCase = ProductsData?.filter(item => item?.category === "IPHONE CASE")
     const airpods = ProductsData?.filter(item => item?.category === "AIRPODS PRO CASE")
     const lighting = ProductsData?.filter(item => item?.category === "LIGHTNING CABLE")
@@ -24,7 +26,7 @@ const HomeProducts = () => {
                         </div>
                         <div className='mt-4 '>
                             {
-                                productCategories?.map((item: any, index: number) => (
+                                productCategories?.map((item: ProductCategory, index: number) => (
                                     <div key={index} className=''>
                                         <Link href={item?.id} onClick={() => setCategory(item?.category)} className='cursor-pointer'>
                                             <h3 className={`${category === item?.category ? "bg-blue-50 border-r-[4px] font-bold border-blue-400" : ""} py-1.5 my-1 px-2 text-[14px]`}>{item?.category}</h3>

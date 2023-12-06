@@ -1,13 +1,17 @@
+import { Iproduct } from "@/types";
 import Image from "next/image";
 import Link from "next/link";
 
+type categoryProps = {
+    products: Iproduct[]
+}
 
-const ProductCart = ({ products }: any) => {
+const ProductCart = ({ products }: categoryProps) => {
     return (
         <div>
             <div className='grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 px-4 gap-5'>
                 {
-                    products?.map((item: any, index: number) => (
+                    products?.map((item: Iproduct, index: number) => (
                         <div key={index} className=''>
                             <Link href={`/product-details/${item?.id}`} className='p-3'>
                                 <div>

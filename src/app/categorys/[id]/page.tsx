@@ -3,11 +3,12 @@ import Navbar from '@/components/ui/Navbar';
 import SearchBar from '@/components/ui/SearchBar';
 import SmallNavbar from '@/components/ui/SmallNavbar';
 import { ProductsData } from '@/constants/productsData';
+import { Iproduct } from '@/types';
 import React from 'react';
 
 const page = ({ params: { id } }: { params: { id: string } }) => {
     const category = id.replace(/%20/g, ' ');
-    const moreProducts = ProductsData?.filter(item => item?.category === category)
+    const moreProducts: Iproduct[] = ProductsData?.filter(item => item?.category === category)
     return (
         <div className='relative'>
             <Navbar />

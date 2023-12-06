@@ -6,6 +6,7 @@ import BackBtn from "@/components/ui/BackBtn";
 import Footer from "@/components/ui/Footer";
 import Navbar from "@/components/ui/Navbar";
 import { ProductsData } from "@/constants/productsData";
+import { Iproduct } from "@/types";
 import { IconChevronRight } from "@tabler/icons-react";
 import Link from "next/link";
 import { IoBagHandleOutline } from "react-icons/io5";
@@ -13,7 +14,7 @@ import { IoBagHandleOutline } from "react-icons/io5";
 
 const page = ({ params: { id } }: { params: { id: string } }) => {
     const product = ProductsData?.find(item => item?.id === id)
-    const moreProducts = ProductsData?.filter(item => item?.category === product?.category)
+    const moreProducts: Iproduct[] = ProductsData?.filter(item => item?.category === product?.category)
 
     return (
         <div>

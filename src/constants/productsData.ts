@@ -16,6 +16,7 @@ import power1 from "@/assets/image/4.webp";
 import power2 from "@/assets/image/3 (1).webp";
 import power3 from "@/assets/image/3.webp";
 import power4 from "@/assets/image/1-1_8yMenYh.webp";
+import { Iproduct } from "@/types";
 
 export const productCategories = [
   {
@@ -36,7 +37,7 @@ export const productCategories = [
   },
 ];
 
-export const ProductsData = [
+export const ProductsData: Iproduct[] = [
   {
     id: "01iphone",
     name: "FOX IPHONE CASE",

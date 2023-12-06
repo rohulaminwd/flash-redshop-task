@@ -2,14 +2,21 @@ import Image from 'next/image';
 import Link from 'next/link';
 import React from 'react';
 import TitleBar from '../ui/TitleBar';
+import { Iproduct } from '@/types';
 
-const CategoryProducts = ({ products, category, id }: any) => {
+type categoryProps = {
+    products: Iproduct[]
+    category: string
+    id: string
+}
+
+const CategoryProducts = ({ products, category, id }: categoryProps) => {
     return (
         <div id={id} >
             <TitleBar item={products?.length} title={category} />
             <div className='grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 px-4 gap-5'>
                 {
-                    products?.map((item: any, index: number) => (
+                    products?.map((item: Iproduct, index: number) => (
                         <div key={index} className=''>
                             <Link href={`product-details/${item?.id}`} className='p-3'>
                                 <div>
