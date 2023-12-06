@@ -25,13 +25,14 @@ const Navbar = () => {
                         <SearchBar />
                     </div>
                     <ul className="lg:flex hidden items-center gap-x-6">
-                        <Link href="categories" className="flex items-center gap-x-2">
+                        <Link href="/categories" className="flex items-center gap-x-1">
                             <IconCategory size={24} />
                             <span>Categories</span>
                         </Link>
-                        <Link href="#" className="flex items-center gap-x-2">
+                        <Link href="/addtobag" className="flex relative items-center gap-x-1">
                             <IoBagHandleOutline size={24} />
                             <span>Bag</span>
+                            <span className="absolute -left-2 -top-2 px-1 py-0.5 text-xs bg-black text-white rounded-[3px]">0</span>
                         </Link>
                     </ul>
                     <button onClick={() => setToggle(true)} className="cursor-pointer lg:hidden border-0 outline-none text-black">

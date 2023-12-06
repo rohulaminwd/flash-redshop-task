@@ -5,11 +5,20 @@ import Image from 'next/image';
 import React, { useState } from 'react';
 import { IoBagHandleOutline } from 'react-icons/io5';
 import ColorButton from './ColorButton';
+import { Heart } from 'tabler-icons-react';
+import { setToLocalStorage } from '@/utils/local-storage';
 
 const ProductDetails = ({ product }: any) => {
     const [img, setImg] = useState<any>(product?.img)
     const [color, setColor] = useState<any>(product?.colors[0])
     const [open, setOpen] = useState<any>(false)
+
+    const addToBag = () => {
+
+
+
+        // setToLocalStorage()
+    }
 
     return (
         <div className='lg:flex gap-x-3 p-2 md:p-3 lg:p-4'>
@@ -41,13 +50,13 @@ const ProductDetails = ({ product }: any) => {
                         <ColorButton product={product} setColor={setColor} color={color} />
                     </div>
                     <div className='w-full mt-5 grid grid-cols-2 items-center gap-x-2'>
-                        <button className='flex bg-black hover:bg-black text-white items-center gap-x-2 w-full btn'>
+                        <button onClick={addToBag} className='flex bg-black hover:bg-black text-white items-center gap-x-2 w-full btn'>
                             <IoBagHandleOutline size={20} />
                             <span className='uppercase'>Add to Bag</span>
                         </button>
                         <button className='flex border text-black hover:bg-transparent hover:text-black items-center gap-x-2 w-full btn btn-outline'>
-                            <IoBagHandleOutline size={20} />
-                            <span className='uppercase'>Add to Bag</span>
+                            <Heart size={20} />
+                            <span className='uppercase'>Buy Now</span>
                         </button>
                     </div>
                     <div className='border-y py-2 mt-4'>
@@ -58,7 +67,13 @@ const ProductDetails = ({ product }: any) => {
                             <p className='text-black font-bold'>This product is compatible with: <span className='text-gray-500 !capitalize font-normal'>{product?.name}</span></p>
                             <p className='text-black font-bold'>This product is NOT compatible with: <span className='text-gray-500 font-normal'>{product?.name}</span></p>
                             <p className='text-black font-bold'>Product Materials: <span className='text-gray-500 font-normal'>{product?.name}</span></p>
-                            <p className='text-black font-bold'>Product Dimensions: <span className='text-gray-500 font-normal'>{product?.name}</span></p>
+                            <p className='text-black font-bold'>Product Dimensions</p>
+                            <div>
+                                <p className=''>Height : {product?.description?.height}</p>
+                                <p className=''>Width : {product?.description?.width}</p>
+                                <p className=''>Depth : {product?.description?.Depth}</p>
+                                <p className=''>Weight : {product?.description?.Weight}</p>
+                            </div>
                         </div>
                     </div>
                 </div>
